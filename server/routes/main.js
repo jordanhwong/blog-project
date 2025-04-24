@@ -38,7 +38,8 @@ router.get('', async (req, res) => {
 
 });
 
-/* Get Post : id */
+/* GET /
+    Post Page :id */
 router.get('/post/:id', async (req, res) => {
     try {
         let slug = req.params.id;
@@ -60,7 +61,8 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-/* POST / Post - search Term*/
+/* POST / 
+    Post - Search Term */
 router.post('/search', async (req, res) => {
     try {
         const locals = {
@@ -88,12 +90,16 @@ router.post('/search', async (req, res) => {
     }
 });
 
+/* GET / 
+    About */
 router.get('/about', (req, res) => {
     res.render('about', {
         currentRoute: '/about'
     });
 });
 
+/* GET / 
+    Contact */
 router.get('/contact', (req, res) => {
     res.render('contact', {
         currentRoute: '/contact'
